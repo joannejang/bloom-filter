@@ -1,5 +1,4 @@
 #include "bloom.h"
-#include <stdlib.h>
 
 bloom_filter* create_filter(size_t size) {
 	return NULL; // todo

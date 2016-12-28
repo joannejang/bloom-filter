@@ -1,12 +1,15 @@
 #ifndef _BLOOM_H
 #define _BLOOM_H
 
-#include <stdbool.h>
+#include <stdbool.h> // bool
+#include <stdlib.h> // like, everything
+#include <assert.h> // unit tests
+#include <stdio.h> // print statements
 
 typedef struct bloom_filter {
 	void *bits;
 	size_t size;
-};
+} bloom_filter;
 
 bloom_filter* create_filter(size_t size);
 

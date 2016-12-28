@@ -1,5 +1,5 @@
-use_bloom: tests.c bloom.c
-	cc -g -o use_bloom tests.c bloom.c
+test_bloom: tests.c bloom.c
+	cc -g -o test_bloom tests.c bloom.c
 
 clean:
-	rm use_bloom
+	rm test_bloom
