@@ -11,8 +11,11 @@ int main() {
 	printf(possibly_present(filter, "apple") ? "true\n" : "false\n");
 
 	add_entry(filter, "apple");
-	printf("Could be true (but false is okay too): ");
+	printf("Should be true: ");
 	printf(possibly_present(filter, "apple") ? "true\n" : "false\n");
+
+	printf("Should be false (but true is okay too): "); 
+	printf(possibly_present(filter, "orange") ? "true\n" : "false\n");
 
 	free_filter(filter);
 	return 0;
