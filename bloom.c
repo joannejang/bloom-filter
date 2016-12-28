@@ -8,7 +8,7 @@ bloom_filter* create_filter(size_t size) {
 	bloom_filter *filter = calloc(1, sizeof(struct bloom_filter));
 	assert(filter);
 	filter->size = size;
-	filter->bits = calloc(1, size); // TODO resolve calloc vs. malloc-- will I need to memset later?!
+	filter->bits = calloc(1, size*NUM_BITS); // TODO resolve calloc vs. malloc-- will I need to memset later?!
 	return filter;
 }
 

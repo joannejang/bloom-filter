@@ -1,7 +1,9 @@
+#define _GNU_SOURCE
+
 #include "bloom.h"
 #include "hash_functions.h"
 
-#define INIT_SIZE 8
+#define INIT_SIZE 32
 
 void apples_oranges() {
 	bloom_filter* filter = create_filter(INIT_SIZE);
@@ -48,7 +50,7 @@ void stress_test_10k() {
 			if (possibly_present(numbers, str_rand)) {
 				false_positive_count++;
 			}
-			// free(str_rand);
+			free(str_rand);
 		}
 	}
 	double rate = ((double) false_positive_count)/size;
