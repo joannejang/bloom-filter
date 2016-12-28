@@ -21,10 +21,6 @@ void add_entry(bloom_filter *filter, const void *entry);
 
 bool possibly_present(bloom_filter *filter, const void *entry);
 
-uint32_t SuperFastHash(const char *data, int len);
 
-uint32_t djb2(const char *str);
-
-uint32_t jenkins_one_at_a_time_hash(const char *data, int len);
 
 #endif

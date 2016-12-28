@@ -1,6 +1,7 @@
 #include "bloom.h"
+#include "hash_functions.h"
 
-#define INIT_SIZE 16
+#define INIT_SIZE 32
 
 int main() {
 	bloom_filter* filter = create_filter(INIT_SIZE);
