@@ -66,8 +66,8 @@ uint32_t hash_SuperFastHash(const char *data, int len) {
  * ------------
  * http://www.cse.yorku.ca/~oz/hash.html
  */
-uint32_t hash_djb2(const char *str) {
-	uint32_t hash = 5381;
+unsigned long hash_djb2(const char *str) {
+	unsigned long hash = 5381;
 	int c;
 	
 	while ((c = *str++)) {

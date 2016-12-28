@@ -3,6 +3,6 @@ bloom.c
 hash_i(x, m) = (hash_a(x) + i*hash_b(x)) where i is an ordinal, m is the size of the bloom filter, and x is the value to be hashed
 * optimal # of hash functions is - (ln p)/(ln 2) where p is the desired false positive probability
 
-
+-ln(0.95)/ln(2)
 tests.c
-* stress test by inserting ~1 mil entries and comparing the false positive rate
+* stress test by inserting ~1 mil entries and comparing the false positive rate()
