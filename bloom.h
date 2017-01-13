@@ -7,10 +7,13 @@
 #include <stdio.h> // print statements
 #include <stdint.h> // int in hash functions
 #include <string.h> // strlen in hash functions
+#include <math.h> // ceil
 
 typedef struct bloom_filter {
 	void *bits;
 	size_t size;
+	int m;
+	int k;
 } bloom_filter;
 
 bloom_filter* create_filter(size_t size);
